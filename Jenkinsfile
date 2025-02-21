@@ -10,11 +10,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('my-app') {  
-                    echo 'Building the project...'
-                    bat 'C:\\BuildTools\\apache-maven-3.9.9\\bin\\mvn.cmd clean package'
-                    // bat 'mvn clean package' 
-                }
+                echo 'Building the project...'
+                bat 'C:\\BuildTools\\apache-maven-3.9.9\\bin\\mvn.cmd clean package'
             }
         }
 
