@@ -4,15 +4,15 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/SamVESIT/devops-practical.git' // Replace with your repo
+                git 'https://github.com/SamVESIT/devops-practical.git'
             }
         }
 
         stage('Build') {
             steps {
-                dir('my-app') {  // Ensure this matches your project structure
+                dir('my-app') {  
                     echo 'Building the project...'
-                    bat 'mvn clean package'  // Use 'sh' instead of 'bat' for Linux
+                    bat 'mvn clean package' 
                 }
             }
         }
