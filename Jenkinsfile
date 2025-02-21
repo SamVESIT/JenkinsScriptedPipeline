@@ -12,7 +12,8 @@ pipeline {
             steps {
                 dir('my-app') {  
                     echo 'Building the project...'
-                    bat 'mvn clean package' 
+                    bat 'C:\\BuildTools\\apache-maven-3.9.9\\bin\\mvn.cmd clean package'
+                    // bat 'mvn clean package' 
                 }
             }
         }
