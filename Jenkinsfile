@@ -15,9 +15,15 @@ pipeline {
             }
         }
 
+        stage('List Build Output') {
+            steps {
+                bat 'dir /s /b target'
+            }
+        }
+
         stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: '**/target/*.war', onlyIfSuccessful: true
+                archiveArtifacts artifacts: '**/target/*.jar', onlyIfSuccessful: true
             }
         }
     }
